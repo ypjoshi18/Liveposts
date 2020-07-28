@@ -1,0 +1,9 @@
+<h3>{{ post.title | uppercase }}</h3>
+<p>
+    {{ post.desc }}
+</p>
+<img class="img-responsive" src="{{ post.imagePath }}">
+<p>Post Added By: {{ post.postAddedBy }} </p>
+<p>Post datetime: {{ post.postDateTime | date:'short' }} </p>
+<button type="button" (click)=onEdit() *ngIf="isLoggedIn">Edit</button> |
+<button type="button" *ngIf="isLoggedIn" (click)="onDelete()">Delete</button> 
